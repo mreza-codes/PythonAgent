@@ -9,7 +9,7 @@ This project includes a complete data‑processing pipeline for building a local
 
 Below is a preview of the application's interface:
 
-![Screenshot](./screenshot.png)
+![Screenshot](./Screenshot.png)
 
 ---
 
