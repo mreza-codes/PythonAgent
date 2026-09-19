@@ -1,35 +1,17 @@
-## Python Agent – Version 2.0 Update Notes
+## Python Agent – Version 2.0 Changes
 
-This release introduces a cleaner, more stable, and more modular structure for the Python Agent project.  
-Version 2.0 focuses on improving the core logic, simplifying the architecture, and removing unnecessary components while keeping the original database untouched.
+Version 2.0 introduces two major improvements over Version 1.0:
 
-### Key Changes Compared to Version 1.0
+### 1. Agentic RAG System
+- The agent now uses an Agentic RAG loop instead of a simple retrieval system.
+- Supports multi-step reasoning, tool usage, and structured actions.
+- More stable decision-making and better handling of complex queries.
 
-### 1. Refactored Core Files
-- Updated and cleaned the main agent logic.
-- Improved structure and readability across `main.py`, `agent.py`, `rag.py`, and `tools.py`.
-- Removed unused or experimental code paths.
-
-### 2. Simplified RAG & Memory System
-- Memory files are no longer included in the repository.
-- The agent now automatically creates fresh memory files on first run.
-- Reduced risk of corrupted or outdated memory affecting new versions.
-
-### 3. Database Handling
-- The main ChromaDB database is **not included** in this version.
-- Version 2.0 relies on the existing database from Version 1.0.
-- No changes were made to the database schema or stored data.
-
-### 4. Cleaner Project Structure
-- Removed temporary folders (`dist/`, `build/`, `__pycache__/`).
-- Removed PyInstaller artifacts and spec files.
-- Version 2.0 contains only essential source code and assets.
-
-### 5. UI Stability Improvements
-- The PyQt6 interface remains the same but is now better integrated with the updated agent logic.
-- No UI design changes, only internal stability improvements.
+### 2. Persistent Memory System
+- Added a lightweight memory module that stores user interactions.
+- Memory files are created automatically at runtime (not included in the repository).
+- Allows the agent to maintain context across sessions.
 
 ### Notes
-- This version is intended primarily for personal use and development.
-- Users who need the full database should refer to Version 1.0.
-- The agent will generate new memory files automatically during runtime.
+- The database from Version 1.0 is unchanged and not included in this version.
+- Only core source files were updated; no changes were made to the UI or database structure.
